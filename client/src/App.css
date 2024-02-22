@@ -1,0 +1,51 @@
+.container {
+  width: 100%;
+  text-align: center;
+}
+
+.containerNav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+
+}
+
+.containerlogo {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.imagenLogo {
+  width: 60px;
+  filter: drop-shadow(1px 1px 5px #443e3e);
+  cursor: pointer;
+}
+
+.containerButton {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 30px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+}
+
+.buttonNav {
+  background: transparent;
+  text-wrap: wrap;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1863CF;
+  text-shadow: 1px 1px 10px #fff;
+}
