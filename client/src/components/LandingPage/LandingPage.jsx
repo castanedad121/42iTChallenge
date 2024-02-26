@@ -1,8 +1,10 @@
-import styles from "./Landing.module.css";
+// Import stylce css modules
+import styles from "./LandingPage.module.css";
+// import images for landing page
 import constelation from "../../assets/constellation.svg";
 import meditating from "../../assets/meditando-mobile.webp";
 import asterisk from "../../assets/red-asterisk.svg";
-const Landing = () => {
+const LandingPage = () => {
   return (
     <div className={styles.ContainerLanding}>
       <div className={styles.ContainerTextLanding}>
@@ -27,4 +29,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default LandingPage;

@@ -1,52 +1,167 @@
-.ContainerLanding {
+.ContainerTChallenge2 {
     display: flex;
     width: 100%;
-    min-height: 400px;
-    flex-direction: column;
     justify-items: center;
-    align-items: center;
-    margin-top: 25px;
+    justify-content: space-around;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
-.ContainerTextLanding {
+@media (max-width: 420px) {
+    .ContainerTChallenge2 {
+        align-items: center;
+    }
+}
+
+.ContainerColum {
     display: flex;
-    width: 100%;
-    height: 100%;
     flex-direction: column;
-    justify-items: center;
     align-items: center;
+    flex-wrap: wrap;
+    width: 30%;
+    min-width: 320px;
 }
 
-.ContainerTextLanding:h1 {
+.Span {
     margin: 0;
     padding: 0;
+    font-size: 14px;
+    color: #c70a0a;
+    background-color: #292927;
+    padding: 1px 5px 1px 5px;
+    border-radius: 2px;
+    max-width: 160px;
 }
 
-.ContainerTextLanding:p {
-    margin: 0;
-    padding: 0;
-}
-
-.ContainerImgLanding {
+.Paragraph {
+    background-color: #1E1E1E;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 280px;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: left;
+    padding: 5px 15px 5px 15px;
+    text-wrap: pretty-break-word;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Editor {
+    border-radius: 10px;
+    overflow: hidden;
     width: 100%;
 }
 
-.ImgAsterisk {
-    position: absolute;
-    width: 320px;
+.ButtonRun {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #1863CF;
+    width: 130px;
 }
 
-.ImgConstelation {
-    position: absolute;
-    width: 150px;
-    padding-left: 80px;
+.ButtonRun:hover {
+    background-color: #0d3875;
 }
 
-.ImgMeditating {
-    position: absolute;
-    width: 250px;
+.ButtonClear {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #FC6865;
+    margin-left: 20px;
+    margin-top: 30px;
+    width: 130px;
+}
+
+.ButtonClear:hover {
+    background-color: #7c2221;
+}
+
+.ContainerCases {
+    background-color: #ffffff3d;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding: 0 5px 0 5px;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 1px #ffffff;
+    width: 100%;
+}
+
+.ContainerTChallenge2 p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.ContainerTChallenge2 h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.ContainerCase span {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    color: #ff0000;
+}
+
+.ContainerCase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-radius: 5px;
+    width: 50%;
+    padding: 5px 0 10px 0;
+    color: #ffffff;
+    background-color: #1E1E1E;
+}
+
+.ContainerOut {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 45%;
+    padding: 5px 0 10px 0;
+}
+
+.ContainerOutput {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-bottom: solid 1px #ffffff;
+
+}
+
+.ContainerRunCode {
+    background-color: #ffffff3d;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 10px 5px 10px 5px;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 1px #ffffff;
+    width: 100%;
+}
+
+.ContainerRunCode input {
+    width: 90%;
+    text-align: center;
 }

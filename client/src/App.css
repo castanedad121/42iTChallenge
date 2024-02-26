@@ -21,10 +21,20 @@
 
 }
 
-.imagenLogo {
+.imagenLogoActive {
   width: 60px;
   filter: drop-shadow(1px 1px 5px #443e3e);
+  cursor: default;
+}
+
+
+.imagenLogo {
+  width: 60px;
   cursor: pointer;
+}
+
+.imagenLogo:hover {
+  filter: drop-shadow(1px 1px 5px #443e3e);
 }
 
 .containerButton {
@@ -47,5 +57,22 @@
   font-size: 13px;
   font-weight: 600;
   color: #1863CF;
+  text-shadow: 1px 1px 10px #fff;
+}
+
+.buttonNav:hover {
+  border-bottom: solid 3px #FC6865;
+  color: #FC6865;
+}
+
+.buttonNavAcive {
+  background: transparent;
+  text-wrap: wrap;
+  border: none;
+  cursor: default;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: solid 3px #FC6865;
+  color: #FC6865;
   text-shadow: 1px 1px 10px #fff;
 }

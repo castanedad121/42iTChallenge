@@ -1,22 +1,28 @@
+// Import hooks of react
 import { useState } from "react";
+// Import stylce css modules
 import styles from "./TChallenge1.module.css";
+// Import library monaco edito for react
 import Editor from "@monaco-editor/react";
+// Import function for first challenge
 import findPairWithSum from "../../functions/findPairWithSum.js";
+// Import function for validation of inputs
 import validation from "../../functions/validation.js";
 
 const TChallenge1 = () => {
+  // Declaration of local states
   const [runTest, setRuntest] = useState(false);
   const [output, setOutput] = useState("");
   const [errors, setErrors] = useState({
     errorNumbers: "",
     errorTargetSum: "",
   });
-
   const [inputs, setInputs] = useState({
     numbers: "",
     targetSum: "",
   });
 
+  // Declaration of variables that will show information
   const paragraph =
     "Given an array of integers, no number in this array is repeated, and an integer representing the target sum, implement a function that find whether there's a pair of numbers in the array that adds up to the target sum. Return the pair in an array. If such pair does not exist, return an empty array.";
   const examples =
@@ -28,10 +34,8 @@ const TChallenge1 = () => {
     showFoldingControls: "never",
     wordWrap: "on",
     minimap: { enabled: false },
-    scrollbar: { vertical: "hidden" },
     scrollBeyondLastLine: false,
   };
-
   const tests = [
     {
       case: "Case 1",
@@ -48,7 +52,7 @@ const TChallenge1 = () => {
       output: findPairWithSum([3, 6, 8, 10], 15),
     },
   ];
-
+  // Input change handler to capture information in a local state
   const handlerChange = (event) => {
     const property = event.target.name;
     const value = event.target.value;
@@ -58,11 +62,11 @@ const TChallenge1 = () => {
       [property]: value,
     });
   };
-
+  // Validation of error in the inputs
   const handlerRun = () => {
-    setErrors(validation(inputs));
+    setErrors(validation(inputs, 1));
   };
-
+  //Handler to make use of the first challenge function
   const handleSubmit = (event) => {
     event.preventDefault();
     if (errors.errorNumbers || errors.errorTargetSum) {
@@ -73,7 +77,7 @@ const TChallenge1 = () => {
       setOutput(`[ ${findPairWithSum(numbers, targetSum)} ]`);
     }
   };
-
+  // Button handler that clears input and output information
   const handleClear = (event) => {
     event.preventDefault();
     setInputs({
@@ -92,8 +96,10 @@ const TChallenge1 = () => {
     <div className={styles.ContainerTChallenge1}>
       <div className={styles.ContainerColum}>
         <h1>Two Number Sum</h1>
-        <p>{paragraph}</p>
-        <div className={styles.Editor}>
+        <div className={styles.Paragraph}>
+          <p>{paragraph}</p>
+        </div>
+        <div className={styles.EditorParagraph}>
           <Editor
             theme="vs-dark"
             value={examples}
@@ -102,7 +108,6 @@ const TChallenge1 = () => {
             defaultLanguage="javascript"
             loading={true}
             options={options}
-            className={styles.Editor}
           />
         </div>
       </div>

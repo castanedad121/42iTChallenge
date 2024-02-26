@@ -1,12 +1,15 @@
+// Import hooks of react
 import { useState } from "react";
+// Import of components
 import iLogo from "./assets/42ico.svg";
-import Landing from "./components/Landing/Landing";
+import LandingPage from "./components/LandingPage/LandingPage";
 import TChallenge1 from "./components/TChallenge1/TChallenge1";
 import TChallenge2 from "./components/TChallenge2/TChallenge2";
-
+// Import styles css
 import "./App.css";
 
 function App() {
+  // Intialize of local states for handler visibility of components
   const [buttonActive, setButtonActive] = useState({
     landing: true,
     buttonChallenge1: false,
@@ -26,12 +29,14 @@ function App() {
             }}
             src={iLogo}
             alt="42i - logo"
-            className="imagenLogo"
+            className={buttonActive.landing ? "imagenLogoActive" : "imagenLogo"}
           />
         </div>
         <div className="containerButton">
           <button
-            className="buttonNav"
+            className={
+              buttonActive.buttonChallenge1 ? "buttonNavAcive" : "buttonNav"
+            }
             onClick={() => {
               setButtonActive({
                 landing: false,
@@ -43,7 +48,9 @@ function App() {
             TWO NUMBER SUM
           </button>
           <button
-            className="buttonNav"
+            className={
+              buttonActive.buttonChallenge2 ? "buttonNavAcive" : "buttonNav"
+            }
             onClick={() => {
               setButtonActive({
                 landing: false,
@@ -57,7 +64,7 @@ function App() {
         </div>
       </nav>
       {buttonActive.landing ? (
-        <Landing />
+        <LandingPage />
       ) : buttonActive.buttonChallenge1 ? (
         <TChallenge1 />
       ) : buttonActive.buttonChallenge2 ? (
