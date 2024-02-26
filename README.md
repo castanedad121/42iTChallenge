@@ -12,7 +12,7 @@ Hello everyone, this is a project where I solve a technical test for the company
 
 ## 🗒️ Comands
 
-All commands are run from the root of the project (client), from a terminal:
+All commands are run from the root of the project, from a terminal:
 
 | Command             | Action                                       |
 | :------------------ | :------------------------------------------- |
